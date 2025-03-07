@@ -72,7 +72,7 @@ endif
 #   ARG 2: Path of Dockerfile we want to build.
 define build_image
 	$(eval IMAGE_NAME := $(IMAGE_REGISTRY):$(1)-$(IMAGE_TAG))
-	$(eval BUILD_ARGS :=)
+	$(eval BUILD_ARGS := --platform linux/amd64)
 
 	$(info # Building $(IMAGE_NAME) image...)
 
